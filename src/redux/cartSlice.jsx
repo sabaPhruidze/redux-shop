@@ -21,6 +21,7 @@ const cartSlice = createSlice({
         }
     }
 })
-
+//actions (ბრძანებები): ესენი (addToCart, clearCart) გვჭირდება React-ის კომპონენტებში (მაგალითად, ღილაკზე დაჭერისას).
 export const {addToCart,clearCart} = cartSlice.actions;
+//reducer (ტვინი): ეს არის მთლიანი ლოგიკა, რომელიც გვჭირდება Redux Store-ში (საცავში), რომ მან იცოდეს, როგორ მართოს ეს კონკრეტული ნაწილი.
 export default cartSlice.reducer
