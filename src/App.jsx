@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector,useDispatch } from "react-redux"
 import { addToCart,clearCart } from "./redux/cartSlice"
 import { ShoppingCart,Trash2 } from "lucide-react";
+import "./App.css"
 
  const products = [
     {id:1, name:'მარწყვი',price:2.5},
@@ -19,10 +20,10 @@ function App() {
   return (
     <div className='app-container'>
       <nav className='navbar'>
-        <h1>Fresh Market</h1>
+        <h1>ონლაინ მაღაზია</h1>
         <div className='cart-badge'>
           <ShoppingCart size={24}/>
-          <span>{cartItems.length}</span>
+          {" "}
           <span className='price-tag'>{totalPrice.toFixed(1)}</span> {/*used toFixed method from prototype */}
 
         </div>
