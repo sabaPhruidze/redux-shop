@@ -21,7 +21,7 @@ function App() {
         <div className="cart-badge">
           <ShoppingCart size={24} />{" "}
           <span className="price-tag">{totalPrice.toFixed(1)}</span>{" "}
-          {/*used toFixed method from prototype */}
+          {/*used toFixed method */}
         </div>
       </nav>
       <main className="main-content">
@@ -35,7 +35,7 @@ function App() {
                 className="add-button"
                 onClick={() => dispatch(addToCart(product))}
               >
-                Add
+                Add Cart
               </button>
             </div>
           ))}
@@ -46,7 +46,7 @@ function App() {
               onClick={() => dispatch(clearCart())}
               className="clear-button"
             >
-              clear
+              Clear cart
             </button>
             <Trash2 size={18} />
           </div>

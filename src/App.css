@@ -37,7 +37,7 @@ body {
 }
 @media only screen and (max-width: 600px) {
   .app-container {
-    margin: 10px auto; /* ← ზემოდან 10px, გვერდებზე ცენტრში */
+    margin: 10px auto;
   }
 }
 
@@ -95,7 +95,7 @@ body {
 /* --- Products grid --- */
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 18px;
 }
 
@@ -103,7 +103,7 @@ body {
 .product-card {
   background: #ffffff;
   border-radius: 18px;
-  padding: 16px 16px 18px;
+  padding: 16px 24px;
   box-shadow:
     0 10px 25px rgba(148, 163, 184, 0.25),
     0 0 0 1px rgba(226, 232, 240, 0.9);
@@ -150,9 +150,7 @@ body {
   gap: 6px;
   transition:
     transform 0.15s ease,
-    box-shadow 0.15s ease,
-    background 0.15s ease,
-    color 0.15s ease;
+    box-shadow 0.15s ease;
 }
 
 /* Add to cart */
@@ -219,5 +217,16 @@ body {
 
   .main-content {
     padding: 18px 16px 22px;
+  }
+}
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: 1fr;
   }
 }
